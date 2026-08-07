@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0a0a0f"/>
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a78bfa"/>
+      <stop offset="100%" style="stop-color:#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <text x="600" y="260" text-anchor="middle" font-family="system-ui, sans-serif" font-size="72" font-weight="700" fill="url(#g)">David Villegas</text>
+  <text x="600" y="340" text-anchor="middle" font-family="system-ui, sans-serif" font-size="36" fill="#94a3b8">Backend Developer · Java &amp; Spring Boot</text>
+  <text x="600" y="420" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" fill="#64748b">davidportfolio.vercel.app</text>
+</svg>
