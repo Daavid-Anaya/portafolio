@@ -102,9 +102,11 @@ foreach ($file in $files) {
   Invoke-CheckedCommand -Command "oci" -Arguments $arguments
 }
 
-$deploymentUrl = "https://$Namespace.objectstorage.$Region.oci.customer-oci.com/n/$Namespace/b/$Bucket/o/"
+$objectStorageBaseUrl = "https://$Namespace.objectstorage.$Region.oci.customer-oci.com/n/$Namespace/b/$Bucket/o"
+$deploymentUrl = "$objectStorageBaseUrl/index.html"
 
 Write-Host "Deployment URL: $deploymentUrl"
+Write-Host "Object Storage prefix: $objectStorageBaseUrl/"
 
 if ($DryRun) {
   Write-Host "Dry run completed. No files were uploaded."

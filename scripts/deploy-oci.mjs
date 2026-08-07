@@ -210,9 +210,11 @@ function main() {
     runChecked("oci", args);
   }
 
-  const deploymentUrl = `https://${options.namespace}.objectstorage.${options.region}.oci.customer-oci.com/n/${options.namespace}/b/${options.bucket}/o/`;
+  const objectStorageBaseUrl = `https://${options.namespace}.objectstorage.${options.region}.oci.customer-oci.com/n/${options.namespace}/b/${options.bucket}/o`;
+  const deploymentUrl = `${objectStorageBaseUrl}/index.html`;
 
   console.log(`Deployment URL: ${deploymentUrl}`);
+  console.log(`Object Storage prefix: ${objectStorageBaseUrl}/`);
   console.log(options.dryRun ? "Dry run completed. No files were uploaded." : "Deployment completed.");
 }
 
