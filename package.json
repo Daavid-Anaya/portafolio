@@ -6,6 +6,8 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "deploy:oci": "node ./scripts/deploy-oci.mjs",
+    "deploy:oci:dry-run": "node ./scripts/deploy-oci.mjs --dry-run --skip-build",
     "preview": "astro preview",
     "astro": "astro"
   },
