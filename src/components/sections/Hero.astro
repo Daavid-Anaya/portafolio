@@ -1,0 +1,151 @@
+---
+import Button from "@/components/ui/Button.astro";
+---
+
+<section
+  id="inicio"
+  class="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-4 py-24 sm:px-6 lg:px-8"
+  aria-labelledby="hero-heading"
+>
+  <!-- Decorative background blobs -->
+  <div
+    class="pointer-events-none absolute inset-0 overflow-hidden"
+    aria-hidden="true"
+  >
+    <!-- Large violet blob — top right -->
+    <div
+      class="absolute -right-40 -top-40 h-[600px] w-[600px] rounded-full bg-violet-600/10 blur-[120px]"
+    ></div>
+    <!-- Medium violet blob — bottom left -->
+    <div
+      class="absolute -bottom-20 -left-40 h-[500px] w-[500px] rounded-full bg-violet-800/10 blur-[100px]"
+    ></div>
+    <!-- Small cyan accent — center -->
+    <div
+      class="absolute left-1/2 top-1/3 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-cyan-400/5 blur-[80px]"
+    ></div>
+    <!-- Grid pattern overlay -->
+    <div
+      class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:48px_48px]"
+    ></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 w-full max-w-4xl text-center">
+    <!-- Terminal block with typewriter -->
+    <div
+      class="mb-8 overflow-hidden rounded-xl border border-surface-600 bg-surface-800/80 p-4 text-left backdrop-blur-sm sm:p-5"
+      data-animate
+      style="--animate-name: fade-up; --animate-delay: 100ms;"
+      role="presentation"
+    >
+      <!-- Terminal top bar -->
+      <div class="mb-3 flex items-center gap-1.5" aria-hidden="true">
+        <span class="h-3 w-3 rounded-full bg-red-400/70"></span>
+        <span class="h-3 w-3 rounded-full bg-yellow-400/70"></span>
+        <span class="h-3 w-3 rounded-full bg-green-400/70"></span>
+        <span class="ml-2 text-xs text-text-muted">~/david-portfolio</span>
+      </div>
+      <!-- Command line -->
+      <div class="flex flex-col gap-1 font-mono text-sm">
+        <p class="text-text-muted">
+          <span class="text-violet-400">david@linux</span>
+          <span class="text-text-muted">:</span>
+          <span class="text-cyan-400">~</span>
+          <span class="text-text-muted">$ </span>
+          <span class="text-text-primary">whoami</span>
+        </p>
+        <p class="hero-typewriter overflow-hidden whitespace-nowrap border-r-2 border-violet-400 text-violet-300" aria-live="polite">
+          David Villegas Anaya — Backend Developer
+        </p>
+      </div>
+    </div>
+
+    <!-- Main heading -->
+    <h1
+      id="hero-heading"
+      class="mb-6 text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl"
+      data-animate
+      style="--animate-name: fade-up; --animate-delay: 200ms;"
+    >
+      Hola, soy
+      <span
+        class="block bg-gradient-to-r from-violet-400 via-violet-300 to-cyan-400 bg-clip-text text-transparent"
+      >
+        David Villegas
+      </span>
+    </h1>
+
+    <!-- Subtitle -->
+    <p
+      class="mx-auto mb-10 max-w-2xl text-lg text-text-secondary sm:text-xl"
+      data-animate
+      style="--animate-name: fade-up; --animate-delay: 300ms;"
+    >
+      Desarrollador <strong class="font-semibold text-text-primary">Backend</strong> especializado en
+      <strong class="font-semibold text-violet-400">Java & Spring Boot</strong>.
+      Estudiante de <strong class="font-semibold text-violet-400">Computer Science</strong>, 
+      y apasiado por el mundo de la tecnología.
+    </p>
+
+    <!-- CTA buttons -->
+    <div
+      class="flex flex-col items-center justify-center gap-4 sm:flex-row"
+      data-animate
+      style="--animate-name: fade-up; --animate-delay: 400ms;"
+    >
+      <Button href="#proyectos" variant="primary" size="lg" aria-label="Ver mis proyectos">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+          <line x1="8" y1="21" x2="16" y2="21"/>
+          <line x1="12" y1="17" x2="12" y2="21"/>
+        </svg>
+        Ver Proyectos
+      </Button>
+      <Button href="#contacto" variant="secondary" size="lg" aria-label="Ir a la sección de contacto">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        Contáctame
+      </Button>
+    </div>
+
+    <!-- Scroll hint -->
+    <div
+      class="mt-16 flex flex-col items-center gap-2"
+      data-animate
+      style="--animate-name: fade-in; --animate-delay: 700ms;"
+      aria-hidden="true"
+    >
+      <span class="text-xs text-text-muted">Desliza para explorar</span>
+      <div class="hero-scroll-arrow flex h-8 w-5 justify-center rounded-full border border-text-muted/30 pt-1">
+        <div class="h-2 w-0.5 rounded-full bg-text-muted/50 animate-bounce"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Typewriter effect — only fires once when visible */
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-typewriter {
+      width: 0;
+      animation:
+        typewriter 2s steps(42, end) 0.6s forwards,
+        blink-cursor 0.75s step-end 0.6s 6;
+    }
+
+    /* After typewriter finishes: remove blinking cursor */
+    .hero-typewriter.cursor-done {
+      border-color: transparent;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-typewriter {
+      width: 100%;
+      border-color: transparent;
+    }
+  }
+</style>

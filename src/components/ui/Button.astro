@@ -1,0 +1,63 @@
+---
+interface Props {
+  variant?: "primary" | "secondary";
+  href?: string;
+  size?: "sm" | "md" | "lg";
+  class?: string;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
+  "aria-label"?: string;
+  "aria-busy"?: boolean | "true" | "false";
+}
+
+const {
+  variant = "primary",
+  href,
+  size = "md",
+  class: className,
+  type = "button",
+  disabled,
+  "aria-label": ariaLabel,
+  "aria-busy": ariaBusy,
+  ...rest
+} = Astro.props;
+
+const sizeClasses = {
+  sm: "px-4 py-1.5 text-sm",
+  md: "px-6 py-2.5 text-sm",
+  lg: "px-8 py-3 text-base",
+};
+
+const variantClasses = {
+  primary:
+    "bg-violet-500 text-white hover:bg-violet-600 active:bg-violet-700 shadow-lg shadow-violet-500/20 hover:shadow-violet-500/30",
+  secondary:
+    "border border-violet-500 text-violet-400 hover:bg-violet-500/10 hover:text-violet-300",
+};
+
+const baseClasses =
+  "inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-all duration-normal focus-visible:outline-2 disabled:cursor-not-allowed disabled:opacity-50";
+
+const classes = [baseClasses, sizeClasses[size], variantClasses[variant], className]
+  .filter(Boolean)
+  .join(" ");
+---
+
+{
+  href ? (
+    <a href={href} class={classes} aria-label={ariaLabel} {...rest}>
+      <slot />
+    </a>
+  ) : (
+    <button
+      type={type}
+      class={classes}
+      disabled={disabled}
+      aria-label={ariaLabel}
+      aria-busy={ariaBusy}
+      {...rest}
+    >
+      <slot />
+    </button>
+  )
+}

@@ -1,0 +1,25 @@
+---
+interface Props {
+  width?: number;
+  height?: number;
+  class?: string;
+}
+
+const { width = 24, height = 24, class: className } = Astro.props;
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width={width}
+  height={height}
+  viewBox="0 0 24 24"
+  fill="currentColor"
+  aria-hidden="true"
+  focusable="false"
+  class={className}
+>
+  <!-- Oracle "O" simplified wordmark -->
+  <path
+    d="M16.412 4.412H7.588C3.399 4.412 0 7.811 0 12s3.399 7.588 7.588 7.588h8.824C20.601 19.588 24 16.189 24 12s-3.399-7.588-7.588-7.588zm-.177 11.294H7.765a3.706 3.706 0 1 1 0-7.412h8.47a3.706 3.706 0 1 1 0 7.412z"
+  />
+</svg>

@@ -1,0 +1,148 @@
+---
+import AnimatedSection from "@/components/ui/AnimatedSection.astro";
+import SectionTitle from "@/components/ui/SectionTitle.astro";
+import { skills, skillCategories } from "@/data/skills";
+import type { SkillCategory } from "@/data/skills";
+---
+
+<section
+  id="habilidades"
+  class="px-4 py-24 sm:px-6 lg:px-8"
+  aria-labelledby="skills-title"
+>
+  <div class="mx-auto max-w-[1100px]">
+    <AnimatedSection animation="fade-up">
+      <SectionTitle
+        title="Habilidades"
+        subtitle="Tecnologías con las que trabajo día a día"
+        id="skills-title"
+      />
+    </AnimatedSection>
+
+    <!-- Legend -->
+    <AnimatedSection animation="fade-in" delay={100} class="mb-10 flex justify-center gap-6">
+      <div class="flex items-center gap-2" aria-label="Leyenda: Dominada">
+        <span
+          class="flex h-3 w-3 items-center justify-center rounded-full bg-violet-500"
+          aria-hidden="true"
+        ></span>
+        <span class="text-sm text-text-secondary">Dominada</span>
+      </div>
+      <div class="flex items-center gap-2" aria-label="Leyenda: Aprendiendo">
+        <span
+          class="flex h-3 w-3 items-center justify-center rounded-full border border-violet-500/50 bg-transparent"
+          aria-hidden="true"
+        ></span>
+        <span class="text-sm text-text-secondary">Aprendiendo</span>
+      </div>
+    </AnimatedSection>
+
+    <!-- Category grid -->
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        skillCategories.map((cat, catIndex) => {
+          const catSkills = skills.filter((s) => s.category === cat.key);
+          if (catSkills.length === 0) return null;
+
+          return (
+            <AnimatedSection animation="fade-up" delay={catIndex * 100}>
+              <div
+                class="flex h-full flex-col rounded-2xl border border-surface-600 bg-surface-800 p-6 transition-all duration-normal hover:border-violet-500/30"
+                aria-label={`Categoría: ${cat.label}`}
+              >
+                <!-- Category header -->
+                <div class="mb-5 flex items-start gap-3">
+                  <div
+                    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-violet-500/30 bg-violet-500/10"
+                    aria-hidden="true"
+                  >
+                    {/* Category icon — generic code icon for all categories */}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="text-violet-400"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      {cat.key === "backend" && (
+                        <>
+                          <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                          <line x1="8" y1="21" x2="16" y2="21" />
+                          <line x1="12" y1="17" x2="12" y2="21" />
+                        </>
+                      )}
+                      {cat.key === "frontend" && (
+                        <>
+                          <polyline points="16 18 22 12 16 6" />
+                          <polyline points="8 6 2 12 8 18" />
+                        </>
+                      )}
+                      {cat.key === "tools" && (
+                        <>
+                          <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                        </>
+                      )}
+                      {cat.key === "databases" && (
+                        <>
+                          <ellipse cx="12" cy="5" rx="9" ry="3" />
+                          <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                          <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                        </>
+                      )}
+                      {cat.key === "cloud" && (
+                        <>
+                          <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+                        </>
+                      )}
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-text-primary">{cat.label}</h3>
+                    <p class="text-xs text-text-muted">{cat.description}</p>
+                  </div>
+                </div>
+
+                <!-- Skills list -->
+                <ul class="flex flex-1 flex-col gap-2.5" role="list" aria-label={`Habilidades de ${cat.label}`}>
+                  {catSkills.map((skill) => (
+                    <li
+                      class:list={[
+                        "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors duration-normal",
+                        skill.level === "mastered"
+                          ? "border border-violet-500/20 bg-violet-500/8 text-text-primary hover:bg-violet-500/15"
+                          : "border border-surface-600 bg-surface-700/50 text-text-secondary hover:border-violet-500/20 hover:text-text-primary",
+                      ]}
+                      aria-label={`${skill.name} — ${skill.level === "mastered" ? "dominada" : "aprendiendo"}`}
+                    >
+                      <!-- Dot indicator -->
+                      <span
+                        class:list={[
+                          "h-2 w-2 shrink-0 rounded-full",
+                          skill.level === "mastered"
+                            ? "bg-violet-400"
+                            : "border border-violet-400/50 bg-transparent",
+                        ]}
+                        aria-hidden="true"
+                      />
+                      <span class="font-medium">{skill.name}</span>
+                      {skill.level === "learning" && (
+                        <span class="ml-auto text-xs text-text-muted">aprendiendo</span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </AnimatedSection>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>

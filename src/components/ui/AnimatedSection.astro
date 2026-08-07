@@ -1,0 +1,23 @@
+---
+interface Props {
+  animation?: "fade-up" | "fade-in" | "slide-left" | "slide-right";
+  delay?: number; // in ms
+  class?: string;
+  tag?: "div" | "section" | "article" | "aside";
+}
+
+const {
+  animation = "fade-up",
+  delay = 0,
+  class: className,
+  tag: Tag = "div",
+} = Astro.props;
+---
+
+<Tag
+  data-animate
+  style={`--animate-name: ${animation}; --animate-delay: ${delay}ms;`}
+  class={className}
+>
+  <slot />
+</Tag>

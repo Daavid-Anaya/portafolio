@@ -1,0 +1,113 @@
+---
+import AnimatedSection from "@/components/ui/AnimatedSection.astro";
+import SectionTitle from "@/components/ui/SectionTitle.astro";
+import Button from "@/components/ui/Button.astro";
+
+const stats = [
+  { value: "5+", label: "Certificaciones obtenidas" },
+  { value: "6+", label: "Proyectos completados" },
+  { value: "10+", label: "Tecnologías dominadas" },
+  { value: "2026", label: "Graduación estimada" },
+] as const;
+---
+
+<section
+  id="sobre-mi"
+  class="px-4 py-24 sm:px-6 lg:px-8"
+  aria-labelledby="about-title"
+>
+  <div class="mx-auto max-w-[1100px]">
+    <AnimatedSection animation="fade-up">
+      <SectionTitle
+        title="Sobre Mí"
+        subtitle="Un poco de mi historia y hacia dónde voy"
+        id="about-title"
+      />
+    </AnimatedSection>
+
+    <div class="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
+      <!-- Avatar + Stats column -->
+      <AnimatedSection animation="slide-left" delay={100} class="flex flex-col items-center gap-8">
+        <!-- Avatar placeholder -->
+        <div class="relative">
+          <!-- Glow ring -->
+          <div
+            class="absolute inset-0 rounded-full bg-violet-500/20 blur-xl scale-110"
+          ></div>
+          <!-- Avatar circle -->
+          <div
+            class="relative flex h-48 w-48 items-center justify-center rounded-full border-2 border-violet-500/50 bg-surface-800 shadow-2xl shadow-violet-500/20"
+          >
+            <img
+              src="/profile/david.jpg"
+              alt="Foto de perfil de David, desarrollador backend"
+              class="h-full w-full rounded-full object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+
+        <!-- Stats grid -->
+        <div
+          class="grid w-full max-w-sm grid-cols-2 gap-4"
+          aria-label="Estadísticas rápidas"
+        >
+          {
+            stats.map((stat, i) => (
+              <div
+                class="flex flex-col items-center rounded-xl border border-surface-600 bg-surface-800 p-4 text-center"
+                data-animate
+                style={`--animate-name: fade-up; --animate-delay: ${200 + i * 80}ms;`}
+              >
+                <span class="text-3xl font-bold text-violet-400">{stat.value}</span>
+                <span class="mt-1 text-xs text-text-secondary">{stat.label}</span>
+              </div>
+            ))
+          }
+        </div>
+      </AnimatedSection>
+
+      <!-- Narrative column -->
+      <AnimatedSection animation="slide-right" delay={200} class="flex flex-col gap-6">
+        <div class="space-y-4 text-text-secondary leading-relaxed">
+          <p>
+            Soy estudiante de <strong class="text-text-primary">Ciencias de la Computación</strong>
+            en la <strong class="text-violet-400">Benemérita Universidad Autónoma de Puebla (BUAP)</strong>,
+            en su ultimo año de carrera estusiasmado por salir a colaborar en nuevos proyectos.
+          </p>
+          <p>
+            A su vez participo del programa
+            <strong class="text-text-primary">Oracle Next Education (ONE)</strong>,
+            donde me he formado en Desarrollo Personal, IA Generativa, Oracle Cloud Infrastructure, Java y Spring Boot.
+            Este programa me abrió las puertas para impulsar mi crecimiento profesional y
+            prepararme para los retos del mundo laboral en el ámbito tecnológico.
+          </p>
+          <p>
+            Hoy cuento con la certificación
+            <strong class="text-violet-400">Oracle Cloud Infrastructure Foundations Associate 2025 y 2026</strong>
+            y tengo como objetivo obtener la certificación oficial de
+            <strong class="text-text-primary">Java (OCP)</strong> y la
+            <strong class="text-text-primary">AWS Certified Cloud Practitioner</strong>,
+            porque creo que la nube y los sistemas distribuidos son el presente y el futuro del backend.
+          </p>
+          <p>
+            Fuera de mis estudios y la programación, disfruto participar en actividades culturales y 
+            artísticas, practicar deporte y compartir tiempo de calidad con mi circulo cercano.
+          </p>
+          
+        </div>
+
+        <!-- CTA -->
+        <div class="flex gap-4">
+          <Button href="#proyectos" variant="primary" size="md">
+            Ver mis proyectos
+          </Button>
+          <Button href="#contacto" variant="secondary" size="md">
+            Hablemos
+          </Button>
+        </div>
+      </AnimatedSection>
+    </div>
+  </div>
+</section>
