@@ -13,8 +13,21 @@ const {
   ogImage = "/og-image.svg",
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const basePath = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+const currentPath = Astro.url.pathname.endsWith("/")
+  ? `${Astro.url.pathname}index.html`
+  : Astro.url.pathname;
+const canonicalPath = currentPath.startsWith(basePath)
+  ? currentPath
+  : `${basePath}${currentPath.replace(/^\//, "")}`;
+const canonicalURL = new URL(canonicalPath, Astro.site);
 const fullTitle = `${title} | David — Backend Developer`;
+const getPublicAssetURL = (assetPath: string) => {
+  const normalizedAssetPath = assetPath.replace(/^\//, "");
+  return new URL(`${basePath}${normalizedAssetPath}`, Astro.site).toString();
+};
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -35,7 +48,7 @@ const jsonLd = {
         "PostgreSQL",
         "Docker",
       ],
-      "url": "https://davidportfolio.vercel.app",
+      "url": canonicalURL.toString(),
       "sameAs": [
         "https://github.com/Daavid-Anaya",
         "https://www.linkedin.com/in/david-villegas-anaya",
@@ -44,7 +57,7 @@ const jsonLd = {
     {
       "@type": "WebSite",
       "name": "David — Backend Developer",
-      "url": "https://davidportfolio.vercel.app",
+      "url": canonicalURL.toString(),
     },
   ],
 };
@@ -58,7 +71,7 @@ const jsonLd = {
 
     <!-- Canonical & Sitemap -->
     <link rel="canonical" href={canonicalURL} />
-    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="sitemap" href={getPublicAssetURL("sitemap-index.xml")} />
 
     <!-- Primary Meta -->
     <title>{fullTitle}</title>
@@ -70,7 +83,7 @@ const jsonLd = {
     <meta property="og:type" content="website" />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(ogImage, Astro.site).toString()} />
+    <meta property="og:image" content={getPublicAssetURL(ogImage)} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:site_name" content="David — Backend Developer" />
     <meta property="og:locale" content="es_MX" />
@@ -79,10 +92,10 @@ const jsonLd = {
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL(ogImage, Astro.site).toString()} />
+    <meta name="twitter:image" content={getPublicAssetURL(ogImage)} />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={getPublicAssetURL("favicon.svg")} />
 
     <!-- Fonts: Inter Variable via Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
