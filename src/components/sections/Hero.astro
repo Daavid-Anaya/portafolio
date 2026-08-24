@@ -47,7 +47,7 @@ import Button from "@/components/ui/Button.astro";
         <span class="ml-2 text-xs text-text-muted">~/david-portfolio</span>
       </div>
       <!-- Command line -->
-      <div class="flex flex-col gap-1 font-mono text-sm">
+      <div class="flex flex-col gap-1 font-mono text-xs sm:text-sm">
         <p class="text-text-muted">
           <span class="text-violet-400">david@Ubuntu</span>
           <span class="text-text-muted">:</span>
@@ -56,7 +56,8 @@ import Button from "@/components/ui/Button.astro";
           <span class="text-text-primary">whoami</span>
         </p>
         <p class="hero-typewriter overflow-hidden whitespace-nowrap border-r-2 border-violet-400 text-violet-300" aria-live="polite">
-          David Villegas Anaya — Backend Developer
+          <span class="sm:hidden">David Villegas — Backend Dev</span>
+          <span class="hidden sm:inline">David Villegas Anaya — Backend Developer</span>
         </p>
       </div>
     </div>
@@ -85,7 +86,7 @@ import Button from "@/components/ui/Button.astro";
       Desarrollador <strong class="font-semibold text-text-primary">Backend</strong> especializado en
       <strong class="font-semibold text-violet-400">Java & Spring Boot</strong>.
       Estudiante de <strong class="font-semibold text-violet-400">Computer Science</strong>, 
-      y apasiado por el mundo de la tecnología.
+      y apasionado por el mundo de la tecnología.
     </p>
 
     <!-- CTA buttons -->
