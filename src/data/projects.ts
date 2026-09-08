@@ -45,7 +45,7 @@ export const projects: Project[] = [
     id: "money-buddy",
     title: "Money Buddy — Dashboard Financiero",
     description:
-      "Aplicación full stack desarrollada en equipo durante una simulación de No Country. Permite capturar información financiera, analizar ingresos, gastos, deudas y ahorro, y mostrar recomendaciones desde un dashboard conectado al backend.",
+      "Aplicación full stack desarrollada como proyecto de cierre del programa Oracle Next Education (ONE) G9 durante un hackathon en la plataforma No Country. Esta solución fintech es un asistente inteligente de salud financiera diseñado para empoderar a los usuarios a comprender sus hábitos, organizar sus gastos y tomar decisiones financieras consistentes.",
     techStack: ["Java", "Spring Boot", "React", "TypeScript", "Vite", "Docker"],
     githubUrl: "https://github.com/No-Country-simulation/team-23-g9-money-buddy",
     liveUrl: "https://money-buddy-frontend-lyart.vercel.app/",
