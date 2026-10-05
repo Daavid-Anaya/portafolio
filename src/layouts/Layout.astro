@@ -269,7 +269,8 @@ const jsonLd = {
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
                 entry.target.setAttribute("data-animate", "visible");
-                observer.unobserve(entry.target);
+              } else {
+                entry.target.setAttribute("data-animate", "");
               }
             });
           },
