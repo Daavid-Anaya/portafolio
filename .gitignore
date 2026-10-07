@@ -28,3 +28,5 @@ pnpm-debug.log*
 #
 .atl
 openspec
+odd/
+.codegraph/
