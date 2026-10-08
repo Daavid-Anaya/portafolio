@@ -22,14 +22,13 @@ export const experienceItems: ExperienceItem[] = [
       {
         heading: "Formación académica",
         bullets: [
-          "Licenciatura en Ciencias de la Computación en BUAP.",
+          "Licenciatura en Ciencias de la Computación en BUAP — último año de carrera.",
         ],
       },
       {
         heading: "Programas de formación",
         bullets: [
-          "Bootcamp de desarrollo con IA en Big School.",
-          "Oracle Next Education G9 y G10.",
+          "Oracle Next Education (ONE) G9 y G10 — formación completada.",
         ],
       },
     ],
@@ -41,10 +40,11 @@ export const experienceItems: ExperienceItem[] = [
     period: "",
     groups: [
       {
-        heading: "Sistema de gestión de licencias",
+        heading: "Sistema de gestión de credenciales",
         bullets: [
-          "Acceso a información en tiempo real mediante QR.",
-          "Panel administrativo para la gestión de licencias.",
+          "Desarrollo integral de un sistema web para administrar las credenciales de los usuarios de una empresa.",
+          "Panel administrativo para registrar, consultar, actualizar y eliminar credenciales.",
+          "Generación de códigos QR para credenciales físicas, vinculados a una página de consulta de la información del usuario.",
         ],
       },
     ],
@@ -52,7 +52,7 @@ export const experienceItems: ExperienceItem[] = [
   {
     id: "community-and-events",
     label: "Comunidad y eventos",
-    title: "Participación en hackathons y eventos",
+    title: "Participación en comunidades y eventos",
     period: "",
     groups: [
       {
@@ -63,10 +63,24 @@ export const experienceItems: ExperienceItem[] = [
         ],
       },
       {
+        heading: "Comunidad",
+        bullets: [
+          "Participación en el AWS Student Builder Group (SBG) de la BUAP."
+        ]
+      },
+      {
         heading: "Congreso",
         bullets: [
           "Participación como staff en Cyber Security Global Congress BUAP 2026.",
         ],
+      },
+      {
+        heading: "Eventos y Conferencias",
+        bullets: [
+          "Asistencia a AWS Summit CDMX 2026.",
+          "Asistencia a FePro BUAP 2026.",
+          "Asistencia a PyDay México 2026.",
+        ]
       },
     ],
   },
@@ -79,7 +93,7 @@ export const experienceItems: ExperienceItem[] = [
       {
         heading: "Gentle-ai",
         bullets: [
-          "Contribuciones al repositorio Gentle-ai.",
+          "Reporte de errores mediante issues en el repositorio de Gentle AI.",
         ],
       },
     ],

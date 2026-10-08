@@ -74,16 +74,16 @@ export const certifications: Certification[] = [
     badgeAlt: "Distintivo de certificación Oracle Cloud Infrastructure AI Foundations Associate 2026",
     status: "earned",
   },
-  {
+  /*{
     id: "oracle-agentic-ai-2026",
     title: "Oracle Agentic AI Foundations Associate 2026",
     issuer: "Oracle",
     date: "2026-12-31",
     credentialUrl: "",
     badgeImage: undefined,
-    badgeAlt: "Distintivo de certificación Oracle Agentic AI Foundations Associate 2026 (próximamente)",
+    badgeAlt: "Distintivo de certificación Oracle Agentic AI Foundations Associate 2026 (En preparación)",
     status: "in-progress",
-  },
+  },*/
   {
     id: "aws-cloud-practitioner",
     title: "AWS Certified Cloud Practitioner",
@@ -91,17 +91,17 @@ export const certifications: Certification[] = [
     date: "2026-08-31",
     credentialUrl: undefined,
     badgeImage: undefined,
-    badgeAlt: "Distintivo de certificación AWS Certified Cloud Practitioner (próximamente)",
+    badgeAlt: "Distintivo de certificación AWS Certified Cloud Practitioner (En preparación)",
     status: "in-progress",
   },
-  {
+  /*{
     id: "aws-ai-practitioner",
     title: "AWS Certified AI Practitioner",
     issuer: "Amazon Web Services",
     date: "2026-08-31",
     credentialUrl: undefined,
     badgeImage: undefined,
-    badgeAlt: "Distintivo de certificación AWS Certified AI Practitioner (próximamente)",
+    badgeAlt: "Distintivo de certificación AWS Certified AI Practitioner (En preparación)",
     status: "in-progress",
-  },
+  },*/
 ];

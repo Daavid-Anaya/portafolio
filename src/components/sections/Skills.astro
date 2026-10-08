@@ -21,12 +21,12 @@ import type { SkillCategory } from "@/data/skills";
 
     <!-- Legend -->
     <AnimatedSection animation="fade-in" delay={100} class="mb-10 flex justify-center gap-6">
-      <div class="flex items-center gap-2" aria-label="Leyenda: Dominada">
+      <div class="flex items-center gap-2" aria-label="Leyenda: Experiencia práctica">
         <span
           class="flex h-3 w-3 items-center justify-center rounded-full bg-violet-500"
           aria-hidden="true"
         ></span>
-        <span class="text-sm text-text-secondary">Dominada</span>
+        <span class="text-sm text-text-secondary">Experiencia práctica</span>
       </div>
       <div class="flex items-center gap-2" aria-label="Leyenda: Aprendiendo">
         <span
@@ -119,7 +119,7 @@ import type { SkillCategory } from "@/data/skills";
                           ? "border border-violet-500/20 bg-violet-500/8 text-text-primary hover:bg-violet-500/15"
                           : "border border-surface-600 bg-surface-700/50 text-text-secondary hover:border-violet-500/20 hover:text-text-primary",
                       ]}
-                      aria-label={`${skill.name} — ${skill.level === "mastered" ? "dominada" : "aprendiendo"}`}
+                      aria-label={`${skill.name} — ${skill.level === "mastered" ? "Experiencia práctica" : "aprendiendo"}`}
                     >
                       <!-- Dot indicator -->
                       <span

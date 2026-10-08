@@ -26,10 +26,12 @@ export interface Skill {
 export const skills: Skill[] = [
   // Backend — mastered
   { name: "Java", icon: "Java", level: "mastered", category: "backend" },
+  {name: "Python", icon: "Python", level: "mastered", category: "backend"},
   { name: "Spring Boot", icon: "SpringBoot", level: "mastered", category: "backend" },
   { name: "REST APIs", icon: "", level: "mastered", category: "backend" },
   { name: "JPA / Hibernate", icon: "", level: "mastered", category: "backend" },
   { name: "Spring Security", icon: "SpringBoot", level: "mastered", category: "backend" },
+  {name: "FastAPI", icon: "FastAPI", level: "learning", category: "backend"},
   { name: "Next.js", icon: "NextJS", level: "learning", category: "backend"},
 
   // Frontend
@@ -43,7 +45,7 @@ export const skills: Skill[] = [
   { name: "Git", icon: "", level: "mastered", category: "tools" },
   { name: "Maven", icon: "", level: "mastered", category: "tools" },
   { name: "Docker", icon: "", level: "mastered", category: "tools" },
-  { name: "kubernetes", icon: "", level: "learning", category: "tools" },
+  { name: "Kubernetes", icon: "", level: "learning", category: "tools" },
 
   // Databases — mastered
   { name: "PostgreSQL", icon: "", level: "mastered", category: "databases" },

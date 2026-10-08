@@ -15,7 +15,7 @@ const publicAsset = (path: string) => `${import.meta.env.BASE_URL}${path.replace
     <AnimatedSection animation="fade-up">
       <SectionTitle
         title="Certificaciones"
-        subtitle="Aprendizaje formal que respalda el trabajo"
+        subtitle="Aprendizaje formal que respalda mi trabajo"
         id="certs-title"
       />
     </AnimatedSection>
@@ -34,7 +34,7 @@ const publicAsset = (path: string) => `${import.meta.env.BASE_URL}${path.replace
           class="flex h-3 w-3 rounded-full border-2 border-dashed border-text-muted bg-transparent"
           aria-hidden="true"
         ></span>
-        <span class="text-sm text-text-secondary">Próximamente</span>
+        <span class="text-sm text-text-secondary">En preparación</span>
       </div>
     </AnimatedSection>
 
@@ -55,7 +55,7 @@ const publicAsset = (path: string) => `${import.meta.env.BASE_URL}${path.replace
                     ? "border-violet-500/40 bg-surface-800 hover:border-violet-400/60 hover:shadow-lg hover:shadow-violet-500/10"
                     : "border-surface-600 bg-surface-800/50 opacity-80 hover:opacity-100 hover:border-surface-600",
                 ]}
-                aria-label={`${isEarned ? "Certificación obtenida" : "Certificación próximamente"}: ${cert.title}`}
+                aria-label={`${isEarned ? "Certificación obtenida" : "Certificación en preparación"}: ${cert.title}`}
               >
                 {/* Accent line — only earned */}
                 {isEarned && (
@@ -113,7 +113,7 @@ const publicAsset = (path: string) => `${import.meta.env.BASE_URL}${path.replace
                         ? "bg-green-400/10 text-green-400 border border-green-400/20"
                         : "bg-surface-700 text-text-muted border border-surface-600",
                     ]}
-                    aria-label={isEarned ? "Estado: obtenida" : "Estado: próximamente"}
+                    aria-label={isEarned ? "Estado: obtenida" : "Estado: en preparación"}
                   >
                     {isEarned ? (
                       <>
@@ -152,7 +152,7 @@ const publicAsset = (path: string) => `${import.meta.env.BASE_URL}${path.replace
                           <circle cx="12" cy="12" r="10" />
                           <polyline points="12 6 12 12 16 14" />
                         </svg>
-                        Próximamente
+                        En preparación
                       </>
                     )}
                   </span>
