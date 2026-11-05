@@ -30,6 +30,7 @@ Abre la dirección que indique la terminal.
 | `npm run build` | Genera la versión estática del sitio. |
 | `npm run preview` | Previsualiza localmente la compilación generada. |
 | `node --test scripts/deployment-config.test.mjs` | Verificar la configuración del deployment |
+| `npm run build && node --test scripts/analytics.test.mjs` | Verificar la integración de Analytics en el sitio generado. |
 
 ## Despliegue
 

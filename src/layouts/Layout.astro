@@ -1,5 +1,6 @@
 ---
 import "@/styles/global.css";
+import Analytics from "@vercel/analytics/astro";
 
 interface Props {
   title: string;
@@ -107,6 +108,7 @@ const jsonLd = {
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <Analytics />
   </head>
 
   <body class="min-h-screen">
