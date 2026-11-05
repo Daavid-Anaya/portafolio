@@ -6,17 +6,17 @@ certificaciones e información de contacto.
 
 ## Tecnologías
 
-- **Astro 5** para generar el sitio estático.
+- **Astro 7** para generar el sitio estático.
 - **Tailwind CSS 4**, integrado mediante Vite, para los estilos.
 - **TypeScript** para los datos de contenido.
 - **@astrojs/sitemap** para generar el mapa del sitio.
 
 ## Desarrollo local
 
-Con Node.js y npm instalados, desde la raíz del proyecto:
+Con Node.js **22.23.4 o superior** y npm **9.6.5 o superior** instalados, desde la raíz del proyecto:
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 

@@ -58,7 +58,7 @@ test("Vercel build publishes root assets and production sitemap URLs, including 
   try {
     const output = join(scratch, "dist");
     execFileSync(process.execPath, [
-      "node_modules/astro/astro.js", "build", "--outDir", output,
+      "node_modules/astro/bin/astro.mjs", "build", "--outDir", output,
     ], {
       cwd: projectRoot,
       env: {
