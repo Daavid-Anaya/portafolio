@@ -1,3 +1,0 @@
-User-agent: *
-Disallow:
-Sitemap: https://axiwklk6zpoi.objectstorage.mx-queretaro-1.oci.customer-oci.com/n/axiwklk6zpoi/b/portafolio-digital/o/sitemap-index.xml

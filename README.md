@@ -4,8 +4,6 @@ Portafolio personal de Juan David Villegas Anaya, desarrollador backend con Java
 y estudiante de Computer Science en la BUAP. Presenta su perfil, proyectos, habilidades,
 certificaciones e información de contacto.
 
-[Sitio web](https://axiwklk6zpoi.objectstorage.mx-queretaro-1.oci.customer-oci.com/n/axiwklk6zpoi/b/portafolio-digital/o/index.html)
-
 ## Tecnologías
 
 - **Astro 5** para generar el sitio estático.
