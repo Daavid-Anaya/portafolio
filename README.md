@@ -29,6 +29,25 @@ Abre la dirección que indique la terminal.
 | `npm start` | Inicia el servidor de desarrollo, igual que `npm run dev`. |
 | `npm run build` | Genera la versión estática del sitio. |
 | `npm run preview` | Previsualiza localmente la compilación generada. |
+| `node --test scripts/deployment-config.test.mjs` | Verificar la configuración del deployment |
+
+## Despliegue
+
+El portafolio se aloja como sitio estático en **Vercel**, con el repositorio de
+GitHub conectado. Los cambios publicados en la rama de producción `main` generan
+un nuevo despliegue automáticamente.
+
+| Configuración | Valor |
+| --- | --- |
+| Application Preset | Astro |
+| Root Directory | `./` |
+| Build Command | `npm run build` |
+| Output Directory | `dist` |
+| Install Command | `npm ci` |
+
+Durante la compilación, la configuración obtiene el dominio de producción de
+`VERCEL_PROJECT_PRODUCTION_URL`, proporcionado por Vercel. No es necesario escribir
+la URL manualmente en `site`; los recursos se sirven desde `/`.
 
 ## Editar el contenido
 
