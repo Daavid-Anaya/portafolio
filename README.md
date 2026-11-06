@@ -32,6 +32,25 @@ Abre la dirección que indique la terminal.
 | `node --test scripts/deployment-config.test.mjs` | Verificar la configuración del deployment |
 | `npm run build && node --test scripts/analytics.test.mjs` | Verificar la integración de Analytics en el sitio generado. |
 
+## Integración continua
+
+El workflow [CI](.github/workflows/ci.yml) se ejecuta en los pull requests dirigidos
+a `main` y en los pushes a esa rama. El job `Validate` usa Node.js **22.23.4**, instala
+las dependencias con `npm ci` y caché de npm, verifica la configuración de despliegue,
+compila el sitio y comprueba Analytics en los archivos generados, en ese orden.
+No necesita secretos ni permisos de escritura y no publica el sitio.
+
+Para ejecutar las mismas validaciones localmente:
+
+```bash
+npm ci
+node --test scripts/deployment-config.test.mjs
+npm run build
+node --test scripts/analytics.test.mjs
+```
+
+La prueba de Analytics necesita el resultado de la compilación anterior.
+
 ## Despliegue
 
 El portafolio se aloja como sitio estático en **Vercel**, con el repositorio de
