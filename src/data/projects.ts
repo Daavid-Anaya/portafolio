@@ -28,7 +28,7 @@ export const projects: Project[] = [
     tags: ["Full Stack", "Turismo", "CMS", "Mapas Interactivos"],
     imageAlt: "Captura de pantalla de Tepexi Digital, plataforma turística y cultural de Tepexi de Rodríguez",
   },
-  {
+  /*{
     id: "forohub",
     title: "ForoHub — API REST con Spring Boot",
     description:
@@ -41,7 +41,7 @@ export const projects: Project[] = [
     tags: ["Backend", "REST API", "Seguridad", "Oracle ONE"],
     imageAlt: "Representación de ForoHub, API REST de foro desarrollada con Spring Boot",
   },
-  {
+  /*{
     id: "money-buddy",
     title: "Money Buddy — Dashboard Financiero",
     description:
@@ -54,6 +54,20 @@ export const projects: Project[] = [
     featured: true,
     tags: ["Full Stack", "Fintech", "Trabajo en Equipo", "Docker"],
     imageAlt: "Representación de Money Buddy, dashboard financiero full stack desarrollado en equipo",
+  },*/
+  {
+    id: "alcancia",
+    title: "Alcancía — Ahorro para el retiro accesible",
+    description:
+      "Proyecto que obtuvo el 4.º lugar de los 7 lugares ganadores de un total de 33 equipos en Talavera Valley Hackathon 2026, categoría WealthTech. Alcancía es un fondo de inversión para el retiro pensado para trabajadores informales y migrantes: se aporta desde $50 pesos en OXXO, por transferencia o con ahorro programado, y se consulta por web o WhatsApp. Desarrollé la landing page, con animaciones ligadas al scroll, y la demo funcional, con arquitectura hexagonal que aísla las reglas de negocio y simula los servicios externos mediante puertos y adaptadores. Mis compañeros de equipo diseñaron las tres estrategias de inversión del fondo.",
+    techStack: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4", "shadcn/ui", "Zod 4", "Recharts", "Astro", "GSAP", "Vitest", "Vercel"],
+    githubUrl: "https://github.com/Daavid-Anaya/alcancia",
+    liveUrl: "https://landing-page-alcancia.vercel.app",
+    imageUrl: "/projects/landing-alcancia.webp",
+    imageKey: "alcancia",
+    featured: true,
+    tags: ["Fintech", "Hackathon", "Arquitectura Hexagonal", "Trabajo en Equipo"],
+    imageAlt: "Captura de pantalla de Alcancía, plataforma de ahorro para el retiro",
   },
   {
     id: "gestion-credenciales",
