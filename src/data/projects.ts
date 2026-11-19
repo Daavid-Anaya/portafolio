@@ -22,7 +22,7 @@ export const projects: Project[] = [
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Sanity CMS", "Leaflet", "Vercel"],
     githubUrl: "https://github.com/Daavid-Anaya/tepexi-digital",
     liveUrl: "https://tepexidigital.com.mx/",
-    imageUrl: "/projects/tepexi-digital.jpg",
+    imageUrl: "/projects/tepexi-digital.webp",
     imageKey: "tepexi-digital",
     featured: true,
     tags: ["Full Stack", "Turismo", "CMS", "Mapas Interactivos"],
