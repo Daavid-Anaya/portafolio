@@ -58,8 +58,10 @@ export const experienceItems: ExperienceItem[] = [
       {
         heading: "Hackathons",
         bullets: [
-          "Hackathon ONE G9 — LATAM.",
+          "4.º lugar de 33 equipos en Talavera Valley Hackathon 2026, categoría WealthTech, con Alcancía: ahorra para tu retiro, con lo que puedas y cuando puedas.",
+          "1.er lugar en Claude Build Day — AWS Community Day CDMX 2026, con IA Trends: plataforma de curación de noticias de IA con revisión editorial, construida en Amazon Quick Apps.",
           "Hackathon ONE G10 — LATAM.",
+          "Hackathon ONE G9 — LATAM.",
         ],
       },
       {
@@ -80,6 +82,7 @@ export const experienceItems: ExperienceItem[] = [
           "Asistencia a AWS Summit CDMX 2026.",
           "Asistencia a FePro BUAP 2026.",
           "Asistencia a PyDay México 2026.",
+          "Asistencia a AWS Community Day CDMX 2026."
         ]
       },
     ],

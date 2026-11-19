@@ -74,7 +74,7 @@ test("Vercel build publishes root assets and production sitemap URLs, including 
     assert.ok(!html.includes("/n/axiwklk6zpoi/"));
     assert.ok(!html.includes("portfolio-preview.example.com"));
     assert.ok(html.includes("https://portfolio.example.com/favicon.svg"));
-    assert.ok(existsSync(join(output, "profile/retrato-david.jpg")));
+    assert.ok(existsSync(join(output, "profile/retrato-david.webp")));
     for (const name of ["sitemap-index.xml", "sitemap-0.xml", "robots.txt"]) {
       const content = readFileSync(join(output, name), "utf8");
       assert.ok(content.includes("https://portfolio.example.com/"), name);
