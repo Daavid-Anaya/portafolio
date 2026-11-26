@@ -25,7 +25,8 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
         with:
-          node-version: "26.13.1"
+          node-version-file: package.json
+          check-latest: true
           cache: npm
 
       - name: Install dependencies
